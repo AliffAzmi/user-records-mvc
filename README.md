@@ -44,3 +44,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+---
+# Project Architecture
+
+![demo](https://user-images.githubusercontent.com/46412369/171260627-15e6850d-7c9b-42ba-9187-82227b4abe7d.png)
+
+The ```index.tsx``` file will act as a canvas on which the entire application will be dynamically built using the ```root``` element. In addition, this file will act as a loader of all the files since they will be linked in the html file itself.
+
+Typescript architecture files: 
+* **user.model.ts** - The attributes (the model) of a user.
+* **user.controller.ts** - The one in charge of joining the service and the view.
+* **user.service.ts** - Manage all operations on users.
+* **store.tsx** - Store and manage state globally without involving props.
+* **UserView.tsx** - Responsible for refreshing and changing the display screen.
